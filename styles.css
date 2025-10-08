@@ -29,7 +29,7 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* Part 1: CSS Box animation setup */
+/* CSS Box animation setup */
 .box {
   width: 100px;
   height: 100px;
@@ -45,7 +45,7 @@ button:hover {
   transform: rotate(360deg) scale(1.5);
 }
 
-/* Part 3: Modal popup animation */
+/*  Modal popup animation */
 .modal {
   width: 300px;
   background-color: white;
