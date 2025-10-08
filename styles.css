@@ -1,0 +1,74 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #fff;
+  color: #6e8efb;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+/* Button hover animation */
+button:hover {
+  background-color: #6e8efb;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Part 1: CSS Box animation setup */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  margin: 40px auto;
+  border-radius: 10px;
+  transition: transform 1s ease, background-color 1s ease;
+}
+
+/* Animated state */
+.box.animate {
+  background-color: #ffcc70;
+  transform: rotate(360deg) scale(1.5);
+}
+
+/* Part 3: Modal popup animation */
+.modal {
+  width: 300px;
+  background-color: white;
+  color: #333;
+  border-radius: 8px;
+  padding: 20px;
+  position: fixed;
+  left: 50%;
+  top: -200px; /* hidden initially */
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: top 0.8s ease, opacity 0.8s ease;
+}
+
+/* Keyframe animation for fading */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal visible class */
+.modal.show {
+  top: 100px;
+  opacity: 1;
+  animation: fadeIn 0.8s ease forwards;
+}
